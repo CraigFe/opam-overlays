@@ -36,7 +36,7 @@ depexts: [
 depends: [
   "ocaml" {>= "4.02.3"}
   "dune"
-  "ctypes" {=version}
+  "ctypes" {= "0.17.1+dune"}
   "conf-pkg-config" {build}
   "lwt" {with-test}
   "ounit" {with-test}
