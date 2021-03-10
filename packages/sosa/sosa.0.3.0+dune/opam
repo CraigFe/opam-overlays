@@ -1,0 +1,44 @@
+opam-version: "2.0"
+synopsis: "Sane OCaml String API"
+description: """
+The Sosa library is a set of APIs (module types) that define what a string of
+characters should be, and a set of modules and functors that implement them.
+"""
+maintainer: ["seb@mondet.org"]
+authors: [
+  "Sebastien Mondet <seb@mondet.org>"
+  "Leonid Rozenberg <leonidr@gmail.com>"
+  "Isaac Hodes <isaachodes@gmail.com>"
+  "Jeff Hammerbacher <jeff.hammerbacher@gmail.com>"
+]
+license: "ISC"
+homepage: "https://github.com/hammerlab/sosa"
+bug-reports: "https://github.com/hammerlab/sosa/issues"
+depends: [
+  "dune" {>= "2.7"}
+  "ocaml" {>= "4.02.0"}
+  "stdlib-shims"
+  "bigarray-compat" {with-test}
+  "bisect_ppx" {dev & >= "2.5.0"}
+  "nonstd" {with-test}
+  "odoc" {with-doc}
+]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+dev-repo: "git+https://github.com/hammerlab/sosa.git"
+url {
+  src: "git+https://github.com/CraigFe/sosa.git#dune-port"
+}
+
