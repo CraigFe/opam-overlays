@@ -51,5 +51,5 @@ build: [
 ]
 dev-repo: "git+https://github.com/mirage/hacl.git"
 url {
-  src: "git://github.com/dinosaure/hacl.gith#dune-2.0-and-fix-clash"
+  src: "git://github.com/dinosaure/hacl.git#dune-2.0-and-fix-clash"
 }
