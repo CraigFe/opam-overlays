@@ -20,6 +20,7 @@ build: [
     "@doc" {with-doc}
   ]
 ]
+dev-repo: "git+https://github.com/CraigFe/ocp-ocamlres.git"
 url {
   src: "git://github.com/CraigFe/ocp-ocamlres#dune"
 }
