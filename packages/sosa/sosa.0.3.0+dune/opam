@@ -39,6 +39,6 @@ build: [
 ]
 dev-repo: "git+https://github.com/hammerlab/sosa.git"
 url {
-  src: "git+https://github.com/CraigFe/sosa.git#dune-port"
+  src: "git://github.com/CraigFe/sosa.git#dune-port"
 }
 
